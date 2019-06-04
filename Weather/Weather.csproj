@@ -90,6 +90,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Direction.cs" />
+    <Compile Include="Model\Speed.cs" />
+    <Compile Include="Model\Temperature.cs" />
+    <Compile Include="Model\WeatherDay.cs" />
+    <Compile Include="Model\WeatherCondition.cs" />
+    <Compile Include="Model\WeatherInfo.cs" />
+    <Compile Include="Model\Wind.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
