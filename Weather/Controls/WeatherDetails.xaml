@@ -11,6 +11,7 @@
         <converters:SpeedValueConverter x:Key="speedValueConverter" />
         <converters:DirectionValueConverter x:Key="directionValueConverter" />
         <converters:RelativeHumidityValueConverter x:Key="relativeHumidityConverter" />
+        <converters:TemperatureValueConverter x:Key="temperatureConverter" />
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -24,7 +25,7 @@
         </Grid.ColumnDefinitions>
 
         <Label Content="Se simte ca:" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Grid.Row="0" Grid.Column="0" VerticalAlignment="Top"/>
-        <Label Content="#feelsLike" HorizontalAlignment="Left" Margin="0,0,0,-0.4" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top"/>
+        <Label Content="{Binding ElementName=Root, Path=Weather.ApparentTemperature, Converter={StaticResource temperatureConverter}}" HorizontalAlignment="Left" Margin="0,0,0,-0.4" Grid.Row="0" Grid.Column="1" VerticalAlignment="Top"/>
 
         <Label Content="Vânt:" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top"/>
 
