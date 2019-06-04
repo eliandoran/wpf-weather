@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Weather
+namespace Weather.Controls
 {
     /// <summary>
     /// Interaction logic for WeatherDetails.xaml

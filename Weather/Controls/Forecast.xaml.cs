@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Weather.Controls
 {
     /// <summary>
-    /// Interaction logic for WeatherIndicator.xaml
+    /// Interaction logic for Forecast.xaml
     /// </summary>
-    public partial class WeatherIndicator : UserControl
+    public partial class Forecast : UserControl
     {
-        public WeatherIndicator()
+        public Forecast()
         {
             InitializeComponent();
         }

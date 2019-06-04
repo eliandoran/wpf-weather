@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Weather.Controls.Forecast"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Weather.Controls"
+             mc:Ignorable="d"
+             d:DesignWidth="500">
+    <ListBox HorizontalAlignment="Stretch">
+        <ListBox.ItemContainerStyle>
+            <Style TargetType="ListBoxItem">
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+            </Style>
+        </ListBox.ItemContainerStyle>
+        
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <Grid HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Content="Mâine" Grid.Column="0" />
+                    <local:WeatherIndicator Grid.Column="1" />
+                    <Label Content="21 - 15" Grid.Column="2" />
+                </Grid>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+
+        <ListItem />
+        <ListItem />
+        <ListItem />
+    </ListBox>
+</UserControl>
