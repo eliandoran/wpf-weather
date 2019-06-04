@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Weather.Core;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Weather.Core.Units;
 
 namespace Weather.Providers
 {
@@ -21,10 +22,12 @@ namespace Weather.Providers
         public WeatherDay ParseCurrentWeather(String jsonString)
         {
             var json = JObject.Parse(jsonString);
-            
+            var main = json["main"];
+
             var result = new WeatherDay()
             {
-                Date = DateTimeOffset.FromUnixTimeSeconds(long.Parse(json["dt"].ToString())).DateTime
+                Date = DateTimeOffset.FromUnixTimeSeconds(long.Parse(json["dt"].ToString())).DateTime,
+                Temperature = Temperature.FromCelsius(double.Parse(main["temp"].ToString()) / 10)
             };
 
             return result;

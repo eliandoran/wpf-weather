@@ -11,11 +11,11 @@ namespace Weather.Core.Units
     /// </summary>
     public struct Temperature
     {
-        private double celsius;
+        public double Celsius { get; }
 
         private Temperature(double celsius)
         {
-            this.celsius = celsius;
+            Celsius = celsius;
         }
 
         /// <summary>

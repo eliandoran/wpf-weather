@@ -18,6 +18,7 @@ namespace Weather.Providers.Tests
             var day = provider.ParseCurrentWeather(input);
 
             Assert.AreEqual(new DateTime(2019, 6, 4, 15, 52, 57), day.Date);
+            Assert.AreEqual(day.Temperature.Celsius, 29.42, 0.01);
         }
 
         private static string GetResource(string name)
