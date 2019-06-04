@@ -17,7 +17,7 @@ namespace Weather.Providers.Tests
             var provider = new OpenWeatherMapProvider();
             var day = provider.ParseCurrentWeather(input);
 
-            Assert.AreEqual(new DateTime(2017, 1, 30, 15, 20, 0), day.Date);
+            Assert.AreEqual(new DateTime(2019, 6, 4, 15, 52, 57), day.Date);
         }
 
         private static string GetResource(string name)
