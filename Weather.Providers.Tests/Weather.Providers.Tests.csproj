@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="OpenWeatherMapProviderTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DirectionParserTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Input\OpenWeatherMap.weather.json" />

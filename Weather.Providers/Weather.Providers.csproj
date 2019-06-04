@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DirectionParser.cs" />
     <Compile Include="OpenWeatherMapConditionParser.cs" />
     <Compile Include="OpenWeatherMapProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

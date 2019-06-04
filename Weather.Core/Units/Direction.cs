@@ -12,12 +12,12 @@ namespace Weather.Core.Units
     public enum Direction
     {
         North,
-        East,
-        South,
-        West,
         NorthEast,
-        NorthWest,
+        East,
+        SouthEast,
+        South,
         SouthWest,
-        SouthEast
+        West,
+        NorthWest
     }
 }
