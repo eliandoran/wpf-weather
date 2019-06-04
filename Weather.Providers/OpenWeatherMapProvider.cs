@@ -23,11 +23,13 @@ namespace Weather.Providers
         {
             var json = JObject.Parse(jsonString);
             var main = json["main"];
+            var weather = json["weather"][0];
 
             var result = new WeatherDay()
             {
                 Date = DateTimeOffset.FromUnixTimeSeconds(long.Parse(json["dt"].ToString())).DateTime,
-                Temperature = Temperature.FromCelsius(double.Parse(main["temp"].ToString()) / 10)
+                Temperature = Temperature.FromCelsius(double.Parse(main["temp"].ToString()) / 10),
+                Condition = OpenWeatherMapConditionParser.Parse(weather["icon"].ToString())
             };
 
             return result;
