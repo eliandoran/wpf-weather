@@ -10,13 +10,14 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <converters:TemperatureValueConverter x:Key="temperatureValueConverter" />
+        <converters:WeatherConditionValueConverter x:Key="weatherConditionValueConverter" />
     </UserControl.Resources>
     <StackPanel Orientation="Horizontal">
         <Image />
 
         <StackPanel Orientation="Vertical">
             <Label Content="{Binding ElementName=Root, Path=Weather.Temperature, Converter={StaticResource temperatureValueConverter}}" />
-            <Label Content="#condition" />
+            <Label Content="{Binding ElementName=Root, Path=Weather.Condition, Converter={StaticResource weatherConditionValueConverter}}" />
         </StackPanel>
     </StackPanel>
 </UserControl>

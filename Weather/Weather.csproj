@@ -71,6 +71,7 @@
     <Compile Include="ValueConverters\RelativeHumidityValueConverter.cs" />
     <Compile Include="ValueConverters\SpeedValueConverter.cs" />
     <Compile Include="ValueConverters\TemperatureValueConverter.cs" />
+    <Compile Include="ValueConverters\WeatherConditionValueConverter.cs" />
     <Page Include="Controls\Forecast.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
