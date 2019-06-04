@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Weather.Core;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Weather.Core.Units;
 
@@ -24,15 +23,24 @@ namespace Weather.Providers
             var json = JObject.Parse(jsonString);
             var main = json["main"];
             var weather = json["weather"][0];
+            var wind = json["wind"];
 
-            var result = new WeatherDay()
+            return new WeatherDay()
             {
                 Date = DateTimeOffset.FromUnixTimeSeconds(long.Parse(json["dt"].ToString())).DateTime,
                 Temperature = Temperature.FromCelsius(double.Parse(main["temp"].ToString()) / 10),
-                Condition = OpenWeatherMapConditionParser.Parse(weather["icon"].ToString())
+                Condition = OpenWeatherMapConditionParser.Parse(weather["icon"].ToString()),
+                Wind = ParseWind(wind)
             };
+        }
 
-            return result;
+        private Wind ParseWind(JToken windToken)
+        {
+            return new Wind()
+            {
+                Direction = DirectionParser.FromDegrees(double.Parse(windToken["deg"].ToString())),
+                Speed = Speed.FromKilometersPerHour(double.Parse(windToken["speed"].ToString()))
+            };
         }
 
     }

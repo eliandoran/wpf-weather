@@ -11,11 +11,11 @@ namespace Weather.Core.Units
     /// </summary>
     public struct Speed
     {
-        private double kmph;
+        public double KilometersPerHour { get; }
 
         private Speed(double kmph)
         {
-            this.kmph = kmph;
+            KilometersPerHour = kmph;
         }
 
         /// <summary>
