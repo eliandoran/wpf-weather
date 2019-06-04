@@ -9,6 +9,7 @@
              mc:Ignorable="d">
     <UserControl.Resources>
         <converters:SpeedValueConverter x:Key="speedValueConverter" />
+        <converters:DirectionValueConverter x:Key="directionValueConverter" />
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -28,6 +29,7 @@
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,-0.4" VerticalAlignment="Top">
             <Label Content="{Binding ElementName=Root, Path=Weather.Wind.Speed, Converter={StaticResource speedValueConverter}}" />
+            <Label Content="{Binding ElementName=Root, Path=Weather.Wind.Direction, Converter={StaticResource directionValueConverter}}" />
         </StackPanel>
 
         <Label Content="Umiditate:" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Grid.Row="2" VerticalAlignment="Top"/>
