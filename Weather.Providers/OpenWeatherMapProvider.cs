@@ -25,14 +25,17 @@ namespace Weather.Providers
             var weather = json["weather"][0];
             var wind = json["wind"];
 
-            return new WeatherDay()
+            var result = new WeatherDay()
             {
                 Date = DateTimeOffset.FromUnixTimeSeconds(long.Parse(json["dt"].ToString())).DateTime,
                 Temperature = Temperature.FromCelsius(double.Parse(main["temp"].ToString()) / 10),
                 Humidity = RelativeHumidity.FromPercentage(double.Parse(main["humidity"].ToString()) / 100),
                 Condition = OpenWeatherMapConditionParser.Parse(weather["icon"].ToString()),
-                Wind = ParseWind(wind),
+                Wind = ParseWind(wind)
             };
+
+            result.ApparentTemperature = ApparentTemperatureCalculator.Calculate(result);
+            return result;
         }
 
         private Wind ParseWind(JToken windToken)

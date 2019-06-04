@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApparentTemperatureCalculator.cs" />
     <Compile Include="DirectionParser.cs" />
     <Compile Include="OpenWeatherMapConditionParser.cs" />
     <Compile Include="OpenWeatherMapProvider.cs" />
