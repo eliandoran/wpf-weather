@@ -30,6 +30,17 @@ namespace Weather.Providers.Tests
             Assert.AreEqual(3.6, wind.Speed.KilometersPerHour, 0.1);
         }
 
+        [TestMethod]
+        public void ParseForecast()
+        {
+            var input = GetResource("Input.OpenWeatherMap.forecast.json");
+
+            var provider = new OpenWeatherMapProvider();
+            var forecast = provider.ParseForecast(input);
+
+            Assert.AreEqual(5, forecast.Count);
+        }
+
         private static string GetResource(string name)
         {
             string ns = typeof(OpenWeatherMapProviderTests).Namespace;

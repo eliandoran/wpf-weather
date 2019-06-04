@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 using Weather.Core;
 using Newtonsoft.Json.Linq;
 using Weather.Core.Units;
+using Newtonsoft.Json;
+using Weather.Providers.OpenWeatherMap.JsonModel;
+using Weather.Providers.OpenWeatherMap;
 
 namespace Weather.Providers
 {
@@ -16,6 +19,30 @@ namespace Weather.Providers
             var result = new WeatherInfo();
 
             return result;
+        }
+
+        public List<WeatherDay> ParseForecast(String forecastString)
+        {
+            var forecast = JsonConvert.DeserializeObject<OwmForecast>(forecastString);
+            var result = new List<WeatherDay>();
+
+            foreach (var day in forecast.list)
+            {
+                result.Add(new WeatherDay()
+                {
+                    Date = DateTimeOffset.FromUnixTimeSeconds(day.dt).DateTime,
+                    Condition = OpenWeatherMapConditionParser.Parse(day.weather[0].icon),
+                    Humidity = RelativeHumidity.FromPercentage(day.main.humidity),
+                    Temperature = Temperature.FromCelsius(day.main.temp / 10),
+                    Wind = new Wind()
+                    {
+                        Direction = DirectionParser.FromDegrees(day.wind.deg),
+                        Speed = Speed.FromKilometersPerHour(day.wind.speed)
+                    }
+                });
+            }
+
+            return ForecastFilter.Filter(result);
         }
 
         public WeatherDay ParseCurrentWeather(String jsonString)

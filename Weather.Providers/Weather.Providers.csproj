@@ -48,6 +48,12 @@
     <Compile Include="DirectionParser.cs" />
     <Compile Include="OpenWeatherMapConditionParser.cs" />
     <Compile Include="OpenWeatherMapProvider.cs" />
+    <Compile Include="OpenWeatherMap\ForecastFilter.cs" />
+    <Compile Include="OpenWeatherMap\JsonModel\OwmForecast.cs" />
+    <Compile Include="OpenWeatherMap\JsonModel\OwmWeatherDay.cs" />
+    <Compile Include="OpenWeatherMap\JsonModel\OwmWeatherEntry.cs" />
+    <Compile Include="OpenWeatherMap\JsonModel\OwmWeatherMain.cs" />
+    <Compile Include="OpenWeatherMap\JsonModel\OwmWind.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
