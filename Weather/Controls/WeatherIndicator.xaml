@@ -10,8 +10,8 @@
         <Image />
 
         <StackPanel Orientation="Vertical">
-            <Label Content="16°C" />
-            <Label Content="Furtună" />
+            <Label Content="#temperatura" />
+            <Label Content="#condition" />
         </StackPanel>
     </StackPanel>
 </UserControl>

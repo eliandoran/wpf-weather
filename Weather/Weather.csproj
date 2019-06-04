@@ -119,5 +119,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Weather.Core\Weather.Core.csproj">
+      <Project>{09315c4e-8546-44cd-81bd-7b863ae5b742}</Project>
+      <Name>Weather.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Weather.Providers\Weather.Providers.csproj">
+      <Project>{53a8c4aa-1ed7-4483-ab82-1ba0a229ab93}</Project>
+      <Name>Weather.Providers</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
