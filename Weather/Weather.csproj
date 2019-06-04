@@ -55,11 +55,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="WeatherDetailsWidget.xaml.cs">
-      <DependentUpon>WeatherDetailsWidget.xaml</DependentUpon>
+    <Compile Include="Controls\WeatherDetails.xaml.cs">
+      <DependentUpon>WeatherDetails.xaml</DependentUpon>
     </Compile>
-    <Compile Include="WeatherWidget.xaml.cs">
-      <DependentUpon>WeatherWidget.xaml</DependentUpon>
+    <Compile Include="Controls\WeatherIndicator.xaml.cs">
+      <DependentUpon>WeatherIndicator.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -73,11 +73,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WeatherDetailsWidget.xaml">
+    <Page Include="Controls\WeatherDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="WeatherWidget.xaml">
+    <Page Include="Controls\WeatherIndicator.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

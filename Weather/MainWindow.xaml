@@ -18,8 +18,8 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
 
-            <local:WeatherWidget Grid.Column="0" />
-            <local:WeatherDetailsWidget Grid.Column="1" />
+            <local:WeatherIndicator Grid.Column="0" />
+            <local:WeatherDetails Grid.Column="1" />
         </Grid>
     </StackPanel>
 </Window>
