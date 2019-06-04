@@ -36,5 +36,10 @@ namespace Weather.Core
         /// Information about the wind conditions, either current or forecast.
         /// </summary>
         public Wind Wind { get; set; }
+
+        /// <summary>
+        /// The current or forecasted level of relative humidity.
+        /// </summary>
+        public RelativeHumidity Humidity { get; set; }
     }
 }

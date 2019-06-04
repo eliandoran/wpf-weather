@@ -29,8 +29,9 @@ namespace Weather.Providers
             {
                 Date = DateTimeOffset.FromUnixTimeSeconds(long.Parse(json["dt"].ToString())).DateTime,
                 Temperature = Temperature.FromCelsius(double.Parse(main["temp"].ToString()) / 10),
+                Humidity = RelativeHumidity.FromPercentage(double.Parse(main["humidity"].ToString()) / 100),
                 Condition = OpenWeatherMapConditionParser.Parse(weather["icon"].ToString()),
-                Wind = ParseWind(wind)
+                Wind = ParseWind(wind),
             };
         }
 
