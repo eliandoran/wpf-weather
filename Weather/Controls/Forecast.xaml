@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="Weather.Controls.Forecast"
+﻿<UserControl x:Name="Root"
+             x:Class="Weather.Controls.Forecast"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +7,7 @@
              xmlns:local="clr-namespace:Weather.Controls"
              mc:Ignorable="d"
              d:DesignWidth="500">
-    <ListBox HorizontalAlignment="Stretch">
+    <ListBox HorizontalAlignment="Stretch" ItemsSource="{Binding ElementName=Root, Path=ForecastData}">
         <ListBox.ItemContainerStyle>
             <Style TargetType="ListBoxItem">
                 <Setter Property="HorizontalAlignment" Value="Stretch" />
@@ -22,15 +23,11 @@
                         <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
 
-                    <Label Content="Mâine" Grid.Column="0" />
-                    <local:WeatherIndicator Grid.Column="1" />
+                    <Label Content="{Binding Path=Date}" Grid.Column="0" />
+                    <local:WeatherIndicator Weather="{Binding}" Grid.Column="1" />
                     <Label Content="21 - 15" Grid.Column="2" />
                 </Grid>
             </DataTemplate>
         </ListBox.ItemTemplate>
-
-        <ListItem />
-        <ListItem />
-        <ListItem />
     </ListBox>
 </UserControl>

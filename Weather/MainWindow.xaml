@@ -23,7 +23,7 @@
 
             <local:WeatherDetails Grid.Column="1" Weather="{Binding ElementName=Main, Path=Weather}" />
 
-            <local:Forecast Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Stretch" />
+            <local:Forecast ForecastData="{Binding ElementName=Main, Path=WeatherInfo.Forecast}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" HorizontalAlignment="Stretch" />
         </Grid>
     </StackPanel>
 </Window>

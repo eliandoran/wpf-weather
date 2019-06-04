@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Weather.Core;
 
 namespace Weather.Controls
 {
@@ -20,6 +21,15 @@ namespace Weather.Controls
     /// </summary>
     public partial class Forecast : UserControl
     {
+        public static readonly DependencyProperty ForecastDataProperty = DependencyProperty.Register(
+            "ForecastData", typeof(List<WeatherDay>), typeof(Forecast));
+
+        public List<WeatherDay> ForecastData
+        {
+            get { return (List<WeatherDay>)GetValue(ForecastDataProperty); }
+            set { SetValue(ForecastDataProperty, value); }
+        }
+
         public Forecast()
         {
             InitializeComponent();
