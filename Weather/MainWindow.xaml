@@ -19,7 +19,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Label Content="{Binding ElementName=Main, Path=Weather.Date}" />
+            <local:WeatherIndicator Grid.Column="0" Weather="{Binding ElementName=Main, Path=Weather}" />
 
             <local:WeatherDetails Grid.Column="1" Weather="{Binding ElementName=Main, Path=Weather}" />
 
