@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Weather.Core.Units;
 
-namespace Weather.Model
+namespace Weather.Core
 {
     /// <summary>
     /// Contains information about the wind.
     /// </summary>
-    class Wind
+    public class Wind
     {
         /// <summary>
         /// The speed of the wind.

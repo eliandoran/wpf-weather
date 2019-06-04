@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weather.Model
+namespace Weather.Core.Units
 {
     /// <summary>
     /// Value representing a physical quantity of speed.
     /// </summary>
-    struct Speed
+    public struct Speed
     {
         private double kmph;
 

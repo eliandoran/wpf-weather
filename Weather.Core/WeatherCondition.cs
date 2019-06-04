@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weather.Model
+namespace Weather.Core
 {
     /// <summary>
     /// Represents a weather condition (sunny, cloudy, etc.).
@@ -13,7 +13,7 @@ namespace Weather.Model
     /// Adapted from OpenWeatherMap's list of weather conditions:
     /// https://openweathermap.org/weather-conditions
     /// </remarks>
-    enum WeatherCondition
+    public enum WeatherCondition
     {
         Clear,
         FewClouds,

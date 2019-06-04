@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weather.Model
+namespace Weather.Core.Units
 {
     /// <summary>
     /// Value representing a physical quantity of temperature.
     /// </summary>
-    struct Temperature
+    public struct Temperature
     {
         private double celsius;
 

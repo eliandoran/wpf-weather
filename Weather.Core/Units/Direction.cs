@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weather.Model
+namespace Weather.Core.Units
 {
     /// <summary>
     /// Expresses cardinal points, using an 8-wind compass rose.
     /// </summary>
-    enum Direction
+    public enum Direction
     {
         North,
         East,

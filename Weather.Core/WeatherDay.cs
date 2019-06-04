@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Weather.Core.Units;
 
-namespace Weather.Model
+namespace Weather.Core
 {
     /// <summary>
     /// Contains weather information that can either be real-time information or a forecast.
     /// </summary>
-    class WeatherDay
+    public class WeatherDay
     {
         /// <summary>
         /// The date of the weather information. No time information is provided.

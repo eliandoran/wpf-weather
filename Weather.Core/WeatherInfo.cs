@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Weather.Model
+namespace Weather.Core
 {
-    class WeatherInfo
+    public class WeatherInfo
     {
         /// <summary>
         /// The date the weather information was obtained.
