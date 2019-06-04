@@ -67,6 +67,7 @@
     <Compile Include="Controls\WeatherIndicator.xaml.cs">
       <DependentUpon>WeatherIndicator.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ValueConverters\SpeedValueConverter.cs" />
     <Page Include="Controls\Forecast.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

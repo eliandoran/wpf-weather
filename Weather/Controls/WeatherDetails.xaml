@@ -5,7 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Weather.Controls"
+             xmlns:converters="clr-namespace:Weather.ValueConverters"
              mc:Ignorable="d">
+    <UserControl.Resources>
+        <converters:SpeedValueConverter x:Key="speedValueConverter" />
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -23,7 +27,7 @@
         <Label Content="Vânt:" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top"/>
 
         <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Margin="0,0,0,-0.4" VerticalAlignment="Top">
-            <Label Content="{Binding ElementName=Root, Path=Weather.Wind.Speed}" />
+            <Label Content="{Binding ElementName=Root, Path=Weather.Wind.Speed, Converter={StaticResource speedValueConverter}}" />
         </StackPanel>
 
         <Label Content="Umiditate:" HorizontalAlignment="Right" Margin="0,0,0,-0.4" Grid.Row="2" VerticalAlignment="Top"/>
