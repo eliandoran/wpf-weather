@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#8F7A89;}
+	.st1{fill:#009F96;}
+	.st2{fill:#FFFFFF;}
+	.st3{fill:#FCCA3D;}
+	.st4{fill:#444B54;}
+	.st5{fill:#E2BEA6;}
+	.st6{fill:#BF8F83;}
+	.st7{fill:#F99B82;}
+	.st8{fill:#F46E67;}
+	.st9{fill:#D3D8DD;}
+	.st10{fill:#C0E7FF;}
+	.st11{fill:#D3E7EE;}
+	.st12{fill:#F7EAD7;}
+	.st13{fill:none;stroke:#D32F56;stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<path class="st3" d="M29,84c0-19.3,15.7-35,35-35s35,15.7,35,35H29z"></path>
+	</g>
+	<path class="st4" d="M119,81h-17.1c-0.6-8.2-3.9-15.7-9-21.6L105,47.2c1.2-1.2,1.2-3.1,0-4.2s-3.1-1.2-4.2,0L88.6,55.1   c-5.9-5.1-13.4-8.3-21.6-9V29c0-1.7-1.3-3-3-3s-3,1.3-3,3v17.1c-8.2,0.6-15.7,3.9-21.6,9L27.2,43c-1.2-1.2-3.1-1.2-4.2,0   c-1.2,1.2-1.2,3.1,0,4.2l12.1,12.1c-5.1,5.9-8.3,13.4-9,21.6H9c-1.7,0-3,1.3-3,3s1.3,3,3,3h110c1.7,0,3-1.3,3-3S120.7,81,119,81z    M64,52c16.6,0,30.3,12.8,31.9,29H32.1C33.7,64.8,47.4,52,64,52z"></path>
+</g>
+</svg>

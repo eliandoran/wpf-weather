@@ -6,10 +6,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Weather.Controls"
              xmlns:converters="clr-namespace:Weather.ValueConverters"
+             xmlns:svgc="http://sharpvectors.codeplex.com/svgc/"
              mc:Ignorable="d"
              d:DesignWidth="500">
     <UserControl.Resources>
         <converters:ItemsLimiter x:Key="itemsLimiter" />
+        <converters:WeatherConditionImageValueConverter x:Key="weatherConditionImageValueConverter" />
     </UserControl.Resources>
     <ItemsControl ItemsSource="{Binding ElementName=Root, Path=ForecastData, Converter={StaticResource itemsLimiter}, ConverterParameter=3}">
         <ItemsControl.ItemTemplate>
@@ -22,7 +24,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Content="{Binding Path=Date}" Grid.Column="0" />
-                    <local:WeatherIndicator Weather="{Binding}" Grid.Column="1" />
+                    <svgc:SvgViewbox Width="48" Height="48" Stretch="Uniform" local:SvgViewboxAttachedProperties.Source="{Binding Path=Condition, Converter={StaticResource weatherConditionImageValueConverter}}" Grid.Column="1" />
                     <Label Content="21 - 15" Grid.Column="2" />
                 </Grid>
             </DataTemplate>
