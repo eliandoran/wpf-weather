@@ -7,20 +7,14 @@
              xmlns:local="clr-namespace:Weather.Controls"
              mc:Ignorable="d"
              d:DesignWidth="500">
-    <ListBox HorizontalAlignment="Stretch" ItemsSource="{Binding ElementName=Root, Path=ForecastData}">
-        <ListBox.ItemContainerStyle>
-            <Style TargetType="ListBoxItem">
-                <Setter Property="HorizontalAlignment" Value="Stretch" />
-            </Style>
-        </ListBox.ItemContainerStyle>
-        
-        <ListBox.ItemTemplate>
+    <ItemsControl ItemsSource="{Binding ElementName=Root, Path=ForecastData}">
+        <ItemsControl.ItemTemplate>
             <DataTemplate>
                 <Grid HorizontalAlignment="Stretch">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
                     <Label Content="{Binding Path=Date}" Grid.Column="0" />
@@ -28,6 +22,6 @@
                     <Label Content="21 - 15" Grid.Column="2" />
                 </Grid>
             </DataTemplate>
-        </ListBox.ItemTemplate>
-    </ListBox>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
 </UserControl>
