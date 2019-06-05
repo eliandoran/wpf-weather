@@ -68,6 +68,7 @@
       <DependentUpon>WeatherIndicator.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\DirectionValueConverter.cs" />
+    <Compile Include="ValueConverters\ItemsLimiter.cs" />
     <Compile Include="ValueConverters\RelativeHumidityValueConverter.cs" />
     <Compile Include="ValueConverters\SpeedValueConverter.cs" />
     <Compile Include="ValueConverters\TemperatureValueConverter.cs" />

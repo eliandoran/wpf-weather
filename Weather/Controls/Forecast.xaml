@@ -5,9 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Weather.Controls"
+             xmlns:converters="clr-namespace:Weather.ValueConverters"
              mc:Ignorable="d"
              d:DesignWidth="500">
-    <ItemsControl ItemsSource="{Binding ElementName=Root, Path=ForecastData}">
+    <UserControl.Resources>
+        <converters:ItemsLimiter x:Key="itemsLimiter" />
+    </UserControl.Resources>
+    <ItemsControl ItemsSource="{Binding ElementName=Root, Path=ForecastData, Converter={StaticResource itemsLimiter}, ConverterParameter=3}">
         <ItemsControl.ItemTemplate>
             <DataTemplate>
                 <Grid HorizontalAlignment="Stretch">
