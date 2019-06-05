@@ -11,6 +11,7 @@
              d:DesignWidth="500">
     <UserControl.Resources>
         <converters:ItemsLimiter x:Key="itemsLimiter" />
+        <converters:WeatherConditionValueConverter x:Key="weatherConditionValueConverter" />
         <converters:WeatherConditionImageValueConverter x:Key="weatherConditionImageValueConverter" />
     </UserControl.Resources>
     <ItemsControl ItemsSource="{Binding ElementName=Root, Path=ForecastData, Converter={StaticResource itemsLimiter}, ConverterParameter=3}">
@@ -23,9 +24,14 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
 
-                    <Label Content="{Binding Path=Date}" Grid.Column="0" />
-                    <svgc:SvgViewbox Width="48" Height="48" Stretch="Uniform" local:SvgViewboxAttachedProperties.Source="{Binding Path=Condition, Converter={StaticResource weatherConditionImageValueConverter}}" Grid.Column="1" />
-                    <Label Content="21 - 15" Grid.Column="2" />
+                    <Label Content="{Binding Path=Date}" Grid.Column="0" VerticalAlignment="Center" />
+
+                    <StackPanel Orientation="Horizontal" Grid.Column="1" VerticalAlignment="Center">
+                        <svgc:SvgViewbox Width="48" Height="48" Stretch="Uniform" local:SvgViewboxAttachedProperties.Source="{Binding Path=Condition, Converter={StaticResource weatherConditionImageValueConverter}}" VerticalAlignment="Center" />
+                        <Label Content="{Binding Path=Condition, Converter={StaticResource weatherConditionValueConverter}}" VerticalAlignment="Center" />
+                    </StackPanel>
+
+                    <Label Content="21 - 15" Grid.Column="2" VerticalAlignment="Center" />
                 </Grid>
             </DataTemplate>
         </ItemsControl.ItemTemplate>
