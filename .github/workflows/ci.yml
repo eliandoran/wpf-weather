@@ -20,6 +20,8 @@ jobs:
       Test_Project_Path: Weather.Providers.Tests\Weather.Providers.Tests.csproj
       Wpf_Project_Path: Weather\Weather.csproj
       Actions_Allow_Unsecure_Commands: true
+      DOTNET_CLI_TELEMETRY_OPTOUT: true
+      DOTNET_NOLOGO: true
     steps:
       - name: Checkout
         uses: actions/checkout@v2
