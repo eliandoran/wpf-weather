@@ -1,10 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <UseWPF>true</UseWPF>
-    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+    <StartupObject>Weather.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\Weather.Core\Weather.Core.csproj" />
@@ -31,10 +32,7 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.2.220602">
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="SharpVectors" Version="1.7.1" />
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="5.0.2" />
+    <PackageReference Include="SharpVectors" Version="1.7.1" />    
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts" Version="10.0.17763.1000-preview" />
   </ItemGroup>
 </Project>
