@@ -4,7 +4,6 @@
     <TargetFramework>netcoreapp5-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
     <StartupObject>Weather.App</StartupObject>
   </PropertyGroup>
   <ItemGroup>
